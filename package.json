@@ -1,0 +1,21 @@
+{
+  "name": "github_repo_page",
+  "version": "1.0.0",
+  "description": "## Objectives",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build": "esbuild index.js --bundle  --outfile=bundle.js --watch"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/chris-clement/github_repo_page.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/chris-clement/github_repo_page/issues"
+  },
+  "homepage": "https://github.com/chris-clement/github_repo_page#readme"
+}
