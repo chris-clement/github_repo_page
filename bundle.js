@@ -17,7 +17,7 @@
           });
         }
         validateRepo(repo) {
-          console.log(`You chose ${repo}`);
+          fetch(`https://api.github.com/repos/${repo}`).then(console.log(`You chose ${repo}`));
         }
       };
       module.exports = appView2;
