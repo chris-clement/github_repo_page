@@ -18,8 +18,8 @@
         displayRepo(data) {
           console.log(data);
           document.querySelector("#repo-name").innerText = `Repo name: ${data.full_name}`;
-          document.querySelector("#repo-link").innerText = `Repo link:`;
-          document.querySelector("#repo-link").innerHTML = data.html_url;
+          document.querySelector("#repo-link").innerText = `Repo link`;
+          document.querySelector("#repo-link").href = data.html_url
           document.querySelector("#repo-stargazers").innerText = `Stargazers: ${data.stargazers_count}`;
           document.querySelector("#repo-forks").innerText = `Fork count: ${data.forks_count}`;
           document.querySelector("#repo-language").innerText = `Language: ${data.language}`;

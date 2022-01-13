@@ -7,7 +7,7 @@ const appView = require("../appView");
 const fs = require('fs')
 
 describe("class appView", () => {
-  it('validateRepo returns ok if repo exists', () => {
+  it('displayRepo returns correct data', () => {
     document.body.innerHTML = fs.readFileSync('./index.html');
     const view = new appView()
     let repoEl = document.querySelector("#repo-choice")
