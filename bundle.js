@@ -9,15 +9,16 @@
     "appView.js"(exports, module) {
       var appView2 = class {
         constructor() {
-          const repoEl = document.querySelector("#repo-choice");
           const buttonEl = document.querySelector("#validate-button");
           buttonEl.addEventListener("click", () => {
+            const repoEl = document.querySelector("#repo-choice").value;
             console.log("You clicked validate");
-            this.validateRepo(repoEl.value);
+            console.log(repoEl);
+            fetch(`https://api.github.com/repos/${repoEl}`).then((response) => response.json()).then((data) => this.displayRepo(data));
           });
         }
-        validateRepo(repo) {
-          fetch(`https://api.github.com/repos/${repo}`).then(console.log(`You chose ${repo}`));
+        displayRepo(data) {
+          console.log(data);
         }
       };
       module.exports = appView2;
